@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "fa821844-213e-49f4-b328-1bf94e411dc0",
+		"name": "rumah-sakit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17198851"
+	},
+	"item": [
+		{
+			"name": "Register and Get Number",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"faris\",\n    \"city\": \"tangerang\",\n    \"npwp\": 12345,\n    \"address\": \"bonang\",\n    \"contactNumber\": \"081295553570\",\n    \"region\": \"Indonesia\",\n    \"province\": \"kabupaten tangerang\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Pengunjung",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "perPage",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Pengunjung",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/detail/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"detail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
